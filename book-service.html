@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shipment | Gen-Z Transport</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body class="page-enter">
+
+<div class="page-loader">
+    <div class="loader-mark"></div>
+    <strong>GEN-Z TRANSPORT</strong>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container navbar">
+
+        <a class="brand" href="index.html">
+            <span class="brand-icon">GZ</span>
+            Gen-Z Transport
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" type="button">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="track-shipment.html">Track Shipment</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </nav>
+
+        <div class="nav-actions" id="navActions">
+
+            <a class="btn btn-primary" href="track-shipment.html">
+                Track Order
+            </a>
+
+            <div class="profile-menu" id="profileMenu" style="display:none;">
+                <button class="profile-button" id="profileButton" type="button">
+                    <span class="profile-avatar" id="profileAvatar">U</span>
+                    <span id="profileName">User</span>
+                    <span class="profile-arrow">⌄</span>
+                </button>
+
+                <div class="profile-dropdown">
+                    <button type="button" id="logoutButton">Logout</button>
+                </div>
+            </div>
+
+            <a class="btn btn-outline" href="login.html">Log In</a>
+
+            <a class="btn btn-primary" href="book-service.html">
+                Ship Now →
+            </a>
+
+        </div>
+    </div>
+</header>
+
+<!-- PAGE INTRO -->
+<main>
+<section class="section-soft section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">Start Shipping With Us</span>
+            <h1>Book Your Shipment</h1>
+            <p>Provide your shipment details and let us handle the delivery.</p>
+        </div>
+
+        <!-- BOOKING FORM -->
+        <section class="form-card" style="max-width:850px;margin:auto;">
+
+            <form id="bookingForm">
+
+                <!-- SENDER DETAILS -->
+                <div style="margin-bottom:30px;">
+                    <h2 style="font-size:22px;margin-bottom:20px;">
+                        1. Sender Details
+                    </h2>
+
+                    <div class="grid-2">
+
+                        <div class="form-group">
+                            <label for="senderName">Sender Full Name</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                id="senderName"
+                                placeholder="Enter sender name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senderPhone">Sender Phone Number</label>
+                            <input
+                                class="form-control"
+                                type="tel"
+                                id="senderPhone"
+                                placeholder="10-digit mobile number"
+                                pattern="[6-9][0-9]{9}"
+                                maxlength="10"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pickupAddress">Pickup Address</label>
+                        <textarea
+                            class="form-control"
+                            id="pickupAddress"
+                            rows="3"
+                            placeholder="Enter complete pickup address"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="grid-2">
+
+                        <div class="form-group">
+                            <label for="pickupCity">Pickup City</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                id="pickupCity"
+                                placeholder="Enter pickup city"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickupPincode">Pickup PIN Code</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                id="pickupPincode"
+                                placeholder="6-digit PIN code"
+                                pattern="[0-9]{6}"
+                                maxlength="6"
+                                required
+                            >
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RECEIVER DETAILS -->
+                <div style="margin-bottom:30px;">
+                    <h2 style="font-size:22px;margin-bottom:20px;">
+                        2. Receiver Details
+                    </h2>
+
+                    <div class="grid-2">
+
+                        <div class="form-group">
+                            <label for="receiverName">Receiver Full Name</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                id="receiverName"
+                                placeholder="Enter receiver name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="receiverPhone">Receiver Phone Number</label>
+                            <input
+                                class="form-control"
+                                type="tel"
+                                id="receiverPhone"
+                                placeholder="10-digit mobile number"
+                                pattern="[6-9][0-9]{9}"
+                                maxlength="10"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deliveryAddress">Delivery Address</label>
+                        <textarea
+                            class="form-control"
+                            id="deliveryAddress"
+                            rows="3"
+                            placeholder="Enter complete delivery address"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="grid-2">
+
+                        <div class="form-group">
+                            <label for="deliveryCity">Delivery City</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                id="deliveryCity"
+                                placeholder="Enter delivery city"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deliveryPincode">Delivery PIN Code</label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                id="deliveryPincode"
+                                placeholder="6-digit PIN code"
+                                pattern="[0-9]{6}"
+                                maxlength="6"
+                                required
+                            >
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PACKAGE DETAILS -->
+                <div style="margin-bottom:30px;">
+                    <h2 style="font-size:22px;margin-bottom:20px;">
+                        3. Package Details
+                    </h2>
+
+                    <div class="grid-2">
+
+                        <div class="form-group">
+                            <label for="packageType">Package Type</label>
+                            <select class="form-control" id="packageType" required>
+                                <option value="">Select package type</option>
+                                <option value="Documents">Documents</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Food Products">Food Products</option>
+                                <option value="Other Goods">Other Goods</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="packageWeight">Package Weight (KG)</label>
+                            <input
+                                class="form-control"
+                                type="number"
+                                id="packageWeight"
+                                placeholder="Enter weight"
+                                min="0.1"
+                                max="10000"
+                                step="0.1"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deliveryService">Delivery Service</label>
+                        <select class="form-control" id="deliveryService" required>
+                            <option value="">Select delivery service</option>
+                            <option value="Standard Delivery">Standard Delivery</option>
+                            <option value="Express Delivery">Express Delivery</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="packageDescription">Package Description</label>
+                        <textarea
+                            class="form-control"
+                            id="packageDescription"
+                            rows="3"
+                            placeholder="Describe your package (optional)"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <!-- TERMS -->
+                <div class="form-group">
+                    <label style="display:flex;align-items:flex-start;gap:10px;">
+                        <input type="checkbox" id="bookingTerms" required>
+                        <span>I confirm that the shipment information provided is correct.</span>
+                    </label>
+                </div>
+
+                <button
+                    class="btn btn-primary form-submit"
+                    type="submit"
+                    style="width:100%;"
+                >
+                    Confirm Shipment →
+                </button>
+
+                <p
+                    id="bookingError"
+                    role="alert"
+                    style="color:#d93025;margin-top:15px;display:none;"
+                ></p>
+
+            </form>
+
+            <!-- BOOKING SUCCESS -->
+            <div id="bookingSuccess" style="display:none;text-align:center;">
+
+                <div style="font-size:55px;margin-bottom:15px;">✓</div>
+
+                <span class="eyebrow">Booking Confirmed</span>
+
+                <h2 style="margin:15px 0;">Your Shipment Has Been Booked!</h2>
+
+                <p>Your booking details have been saved successfully in this browser.</p>
+
+                <div class="card" style="margin:25px 0;">
+                    <p style="color:var(--muted);">Your Tracking Number</p>
+
+                    <h2
+                        id="generatedTrackingNumber"
+                        style="color:var(--blue);margin:12px 0;"
+                    ></h2>
+
+                    <button
+                        type="button"
+                        class="btn btn-outline"
+                        id="copyTrackingNumber"
+                    >
+                        Copy Tracking Number
+                    </button>
+                </div>
+
+                <a href="track-shipment.html" class="btn btn-primary">
+                    Track Your Shipment →
+                </a>
+
+                <a href="index.html" class="btn btn-outline">
+                    Back to Home
+                </a>
+
+            </div>
+
+        </section>
+    </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container footer-grid">
+
+        <div>
+            <div class="footer-brand">Gen-Z Transport</div>
+            <p>Reliable logistics, every step of the way.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Corporate Office</h3>
+            <p>1234 Placeholder Street</p>
+            <p>Hyderabad, India</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Our Branches</h3>
+            <p>Mumbai · Covai · Trichy</p>
+            <p>Salem · Erode · Chennai</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Get in Touch</h3>
+            <p>+91 9999900000</p>
+            <p>mail@thetravelwebsite.com</p>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <span>© 2026 Gen-Z Transport</span>
+        <span>Privacy Policy · Terms</span>
+    </div>
+</footer>
+
+<!-- BOOKING JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const bookingForm = document.getElementById("bookingForm");
+    const bookingSuccess = document.getElementById("bookingSuccess");
+    const bookingError = document.getElementById("bookingError");
+
+    const trackingDisplay = document.getElementById("generatedTrackingNumber");
+    const copyButton = document.getElementById("copyTrackingNumber");
+
+    if (!bookingForm) return;
+
+    bookingForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        bookingError.style.display = "none";
+
+        if (!bookingForm.checkValidity()) {
+            bookingForm.reportValidity();
+            return;
+        }
+
+        const trackingNumber =
+            "GZT" + Date.now().toString().slice(-10);
+
+        const booking = {
+            bookingId: "BK" + Date.now(),
+            trackingNumber: trackingNumber,
+
+            senderName: document.getElementById("senderName").value.trim(),
+            senderPhone: document.getElementById("senderPhone").value.trim(),
+            pickupAddress: document.getElementById("pickupAddress").value.trim(),
+            pickupCity: document.getElementById("pickupCity").value.trim(),
+            pickupPincode: document.getElementById("pickupPincode").value.trim(),
+
+            receiverName: document.getElementById("receiverName").value.trim(),
+            receiverPhone: document.getElementById("receiverPhone").value.trim(),
+            deliveryAddress: document.getElementById("deliveryAddress").value.trim(),
+            deliveryCity: document.getElementById("deliveryCity").value.trim(),
+            deliveryPincode: document.getElementById("deliveryPincode").value.trim(),
+
+            packageType: document.getElementById("packageType").value,
+            packageWeight: document.getElementById("packageWeight").value,
+            deliveryService: document.getElementById("deliveryService").value,
+            packageDescription: document.getElementById("packageDescription").value.trim(),
+
+            status: "Booked",
+            bookingDate: new Date().toISOString()
+        };
+
+        try {
+            const existingBookings = JSON.parse(
+                localStorage.getItem("genzBookings") || "[]"
+            );
+
+            if (!Array.isArray(existingBookings)) {
+                throw new Error("Invalid booking storage");
+            }
+
+            existingBookings.push(booking);
+
+            localStorage.setItem(
+                "genzBookings",
+                JSON.stringify(existingBookings)
+            );
+
+            localStorage.setItem("genzLastBooking", JSON.stringify(booking));
+            localStorage.setItem("genzLastTrackingNumber", trackingNumber);
+
+            bookingForm.style.display = "none";
+            bookingSuccess.style.display = "block";
+
+            trackingDisplay.textContent = trackingNumber;
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        } catch (error) {
+            bookingError.textContent =
+                "Unable to save your booking. Please check your browser storage and try again.";
+
+            bookingError.style.display = "block";
+        }
+
+    });
+
+    copyButton.addEventListener("click", async function () {
+
+        const trackingNumber = trackingDisplay.textContent;
+
+        try {
+            await navigator.clipboard.writeText(trackingNumber);
+            copyButton.textContent = "Copied!";
+        } catch (error) {
+            copyButton.textContent = "Copy not available";
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>

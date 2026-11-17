@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipment Details | Gen-Z Transport</title>
+<link rel="stylesheet" href="css/style.css"><script src="js/script.js" defer></script>
+</head>
+<body class="page-enter">
+<div class="page-loader"><div class="loader-mark"></div><strong>GEN-Z TRANSPORT</strong></div>
+
+<header class="site-header">
+    <div class="container navbar">
+
+        <a class="brand" href="index.html">
+            <span class="brand-icon">GZ</span>
+            Gen-Z Transport
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a class="active" href="track-shipment.html">Track Shipment</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+        </nav>
+
+        <div class="nav-actions" id="navActions">
+
+            <a class="btn btn-primary" href="track-shipment.html">
+                Track Order
+            </a>
+
+            <div class="profile-menu" id="profileMenu" style="display: none;">
+                <button class="profile-button" id="profileButton" type="button">
+                    <span class="profile-avatar" id="profileAvatar">U</span>
+                    <span id="profileName">User</span>
+                    <span class="profile-arrow">⌄</span>
+                </button>
+
+                <div class="profile-dropdown">
+                    <button type="button" id="logoutButton">Logout</button>
+                </div>
+            </div>
+
+            <a class="btn btn-outline" href="login.html">Log In</a>
+
+            <a class="btn btn-primary" href="book-service.html">
+                Ship Now →
+            </a>
+
+        </div>
+    </div>
+</header>
+
+<main class="section">
+<div class="container">
+<span class="eyebrow">Shipment information</span><h1 style="font-size:38px;margin:15px 0 25px">Shipment Details</h1>
+<div class="grid-2">
+<div class="card"><h2>Order Information</h2>
+<div style="display:grid;gap:18px;margin-top:24px">
+<p><strong>Tracking Number:</strong> <span data-tracking-number></span></p>
+<p><strong>Service Type:</strong> Road Freight</p><p><strong>Carrier:</strong> Gen-Z Transport</p>
+<p><strong>Weight:</strong> 245 Kg</p><p><strong>Booked On:</strong> 21 Aug 2025</p>
+<p><strong>Delivered On:</strong> 28 Aug 2025</p><p><strong>Shipment Status:</strong> <span class="status-pill">Delivered</span></p>
+</div></div>
+<div class="card"><h2>Route Information</h2>
+<img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=80" alt="Freight truck" style="height:190px;width:100%;object-fit:cover;border-radius:14px;margin:20px 0">
+<p><strong>Origin:</strong> Austin, TX, USA</p><p style="margin-top:12px"><strong>Current Location:</strong> Dallas, TX, USA</p><p style="margin-top:12px"><strong>Destination:</strong> Delivery address</p>
+</div>
+</div>
+<div class="card" style="margin-top:25px">
+<h2>Shipment Documents</h2><p>Sample document actions for this frontend demonstration.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
+<button class="btn btn-primary" onclick="window.print()">Download Invoice / Print</button>
+<a class="btn btn-outline" href="tracking-result.html">Back to Tracking</a>
+</div>
+</div>
+</div></main>
+<footer class="site-footer"><div class="container footer-grid">
+<div><div class="footer-brand">Gen-Z Transport</div><p>Reliable logistics, every step of the way.</p></div>
+<div class="footer-column"><h3>Corporate Office</h3><p>1234 Placeholder Street</p><p>Hyderabad, India</p></div>
+<div class="footer-column"><h3>Our Branches</h3><p>Mumbai · Covai · Trichy</p><p>Salem · Erode · Chennai</p></div>
+<div class="footer-column"><h3>Get in Touch</h3><p>+91 9999900000</p><p>mail@thetravelwebsite.com</p></div>
+</div><div class="container footer-bottom"><span>© 2026 Gen-Z Transport</span><span>Privacy Policy · Terms</span></div></footer>
+</body></html>
